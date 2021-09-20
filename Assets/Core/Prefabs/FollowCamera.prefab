@@ -103,7 +103,7 @@ MonoBehaviour:
   target: {fileID: 0}
   localOffset: 0
   offset: {x: 0, y: 0.75, z: 0}
-  distance: 5
+  distance: 13.39
   minDistance: 0
   maxDistance: 100
   positionLerp: 5

@@ -12,9 +12,16 @@ public class UserCharacterManager : MonoBehaviour
     private AnimateAndMoveCharacter characterInstance;
     // private AnimateAndMoveCharacter dummyCharacter;
 
-    public bool InVehicle { get { return currentVehicle != null; } }
+    [Space(10)]
+    public float minDistancePerson = 10;
+    public float maxDistancePerson = 40;
+    public float minDistanceVehicle = 20;
+    public float maxDistanceVehicle = 40;
+
+    [Space(10)]
     public ValuedObject currentVehicle;
     public ValuedObject vehicleInVicinity;
+    public bool InVehicle { get { return currentVehicle != null; } }
     private bool enteredExited;
 
     private bool astralled;
@@ -59,14 +66,14 @@ public class UserCharacterManager : MonoBehaviour
         if (InVehicle)
         {
             height = currentVehicle.transform.position.y;
-            minDistance = 20;
-            maxDistance = 40;
+            minDistance = minDistanceVehicle;
+            maxDistance = maxDistanceVehicle;
         }
         else
         {
             height = characterInstance.mainShells.transform.position.y;
-            minDistance = 5;
-            maxDistance = 40;
+            minDistance = minDistancePerson;
+            maxDistance = maxDistancePerson;
         }
 
         float minAngle = 45;
