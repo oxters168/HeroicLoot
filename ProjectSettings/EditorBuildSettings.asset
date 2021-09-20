@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Core/Scenes/BetterMovement.unity
+    path: Assets/Core/Scenes/WorkingMovement.unity
     guid: 77f971a51f770f848a70ad79c7556f83
   m_configObjects: {}

@@ -84,11 +84,22 @@ MonoBehaviour:
     sessionPlaybackState: 1
     m_terrainsFoldedOut: 0
     m_serializedExternalAction: 
+  - m_description: 'Spawning - '
+    m_operationType: 7
+    m_isActive: 1
+    m_affectedTerrainNames:
+    - Terrain_0_0-20210920 - 173321
+    m_operationDateTime: 9/20/2021 5:49:57 PM
+    scriptableObjectAssetGUID: cb5d50f9f63be8843abb64cc92432365
+    m_isFoldedOut: 0
+    sessionPlaybackState: 1
+    m_terrainsFoldedOut: 0
+    m_serializedExternalAction: 
   m_terrainMinMaxCache:
   - guid: b94ff42367a1c7f4aa66018dce808534
     isWorldmap: 0
     recalculate: 0
     min: 0
-    max: 15.453361
+    max: 0.31250477
   m_bakedMaskCacheEntries: []
   m_worldBiomeMaskSettings: {fileID: 0}
