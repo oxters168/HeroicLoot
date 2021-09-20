@@ -1,0 +1,13 @@
+git clone https://github.com/oxters168/HeroicLoot
+
+navigate to git directory
+
+git submodule update --init --recursive
+
+load assets into project:
+- 3D Items - Mega Pack                   from Frost Forged
+- RPG Character Mecanim Animation Pack   from Explosive
+- Heroic Traversal & Swimming            from AnimationBandit
+- Polygon Pirates                        from Synty Studios
+- Gaia 2                                 from Procedural Worlds
+- Rewired                                from Guavaman Enterprises
