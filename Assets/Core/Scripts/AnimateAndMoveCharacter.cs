@@ -151,61 +151,6 @@ public class AnimateAndMoveCharacter : ValuedObject
             distance = 0.1f;
         Vector2 borderPosition = mainShells.transform.position.xz() + dir * distance;
 
-        // Vector2 breach = characterBounds.center.xz() - otherBounds.center.xz();
-
-        // Vector2 borderPosition = transform.position.xz();
-        // float xOffset = Mathf.Abs(breach.x) - otherBounds.extents.x;
-        // float yOffset = Mathf.Abs(breach.y) - otherBounds.extents.z;
-        // bool xAxis = false;
-        // if (xOffset < -float.Epsilon && yOffset < -float.Epsilon)
-        //     xAxis = true;
-        // else if (yOffset < -float.Epsilon)
-        //     xAxis = true;
-        
-        // if (xAxis)
-        //     borderPosition.x = otherBounds.center.x + (otherBounds.extents.x + collisionRadius) * Mathf.Sign(breach.x) * 1.001f;
-        // else
-        //     borderPosition.y = otherBounds.center.z + (otherBounds.extents.z + collisionRadius) * Mathf.Sign(breach.y) * 1.001f;
-
-        // Vector3 axis0 = worldAxes[0];
-        // Vector3 axis1 = worldAxes[1];
-        // float axis0Mag = otherBounds.extents.Multiply(axis0).magnitude;
-        // float axis1Mag = otherBounds.extents.Multiply(axis1).magnitude;
-        // Debug.DrawRay(otherBounds.center, axis0 * axis0Mag, Color.blue, 1);
-        // Debug.DrawRay(otherBounds.center, axis1 * axis1Mag, Color.green, 1);
-        // Debug.DrawRay(otherBounds.center, dir, Color.white, 1);
-
-
-        // float theta = Vector2.up.GetClockwiseAngle(dir.xz().normalized);
-        
-        // Vector3 axis0 = worldAxes[0];
-        // Vector3 axis1 = worldAxes[1];
-        // if ((theta <= 135 && theta >= 45) || (theta >= 225 && theta <= 315))
-        // {
-        //     axis0 = worldAxes[1];
-        //     axis1 = worldAxes[0];
-        // }
-        // else
-        // {
-        //     axis0 = worldAxes[0];
-        //     axis1 = worldAxes[1];
-        // }
-        // float a = otherBounds.extents.Multiply(axis0).magnitude;
-        // float b = otherBounds.extents.Multiply(axis1).magnitude;
-        // // float x = a * Mathf.Cos(theta * Mathf.Deg2Rad);
-        // // float y = b * Mathf.Sin(theta * Mathf.Deg2Rad);
-        // float tanTheta = Mathf.Tan(theta * Mathf.Deg2Rad);
-        // float x = (a * b) / Mathf.Sqrt(b * b + a * a * tanTheta * tanTheta);
-        // float y = (a * b) / Mathf.Sqrt(a * a + (b * b) / (tanTheta * tanTheta));
-        // // float x = a * dir.Multiply(axis0).magnitude;
-        // // float y = b * dir.Multiply(axis1).magnitude;
-        // // float radius = (x * x) / (a * a) + (y * y) / (b * b) - 1;
-        // float radius = Mathf.Sqrt(x * x + y * y);
-        // Vector3 borderPosition = otherBounds.center + dir * radius;
-        // // Vector3 borderPosition = otherBounds.center + axis0 * x * axis0Mag + axis1 * y * axis1Mag;
-        // // Vector3 borderPosition = otherBounds.center + dir.Multiply(axis0) * axis0Mag + dir.Multiply(axis1) * axis1Mag;
-
-        // Debug.DrawLine(otherBounds.center, borderPosition, Color.black, 5);
         SetPosition(borderPosition);
     }
 
@@ -305,6 +250,7 @@ public class AnimateAndMoveCharacter : ValuedObject
         float groundHeight = float.MinValue;
         Vector3 topPoint = new Vector3(position.x, castingHeight, position.y);
         RaycastHit hitInfo;
+        // Debug.DrawRay(topPoint, Vector3.down * castingHeight, Color.green);
         if (Physics.Raycast(topPoint, Vector3.down, out hitInfo, castingHeight, LayerMask.GetMask("Ground")))
         {
             Debug.DrawRay(topPoint, Vector3.down * hitInfo.distance, Color.green);

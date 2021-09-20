@@ -281,7 +281,7 @@ MonoBehaviour:
       orientation: {x: 0, y: 0, z: 0, w: 0}
   mainShells: {fileID: 5142689279141130066}
   dummyShells: {fileID: 985683091561600608}
-  waterLevel: -2
+  waterLevel: 3
   waterTip: 1
   trudgeEffect: 0.3
   walkSpeed: 1.5

@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Core/Scenes/BetterMovement.unity
+    guid: 77f971a51f770f848a70ad79c7556f83
   m_configObjects: {}
