@@ -62,3 +62,15 @@ crashlytics-build.properties
 
 Assets/Rewired
 !Assets/Rewired/.gitkeep
+
+Assets/HeroicTraversal
+!Assets/HeroicTraversal/.gitkeep
+
+Assets/3D Items - Mega Pack
+!Assets/3D Items - Mega Pack/.gitkeep
+
+Assets/PolygonPirates
+!Assets/PolygonPirates/.gitkeep
+
+Assets/ExplosiveLLC/RPG Character Mecanim Animation Pack
+!Assets/ExplosiveLLC/RPG Character Mecanim Animation Pack/.gitkeep
